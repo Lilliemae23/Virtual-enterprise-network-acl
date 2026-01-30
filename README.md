@@ -4,18 +4,24 @@ This project demonstrates the design of a simple virtual enterprise network usin
 
 Project Overview
 
+
 The objective of this project was to:
 - Design a small enterprise-style network
 - Verify normal connectivity between networks
 - Apply security controls using ACLs
 - Observe and analyze how traffic is allowed or denied
 
+
+
+
 The network was divided into three logical groups:
 - **Admin Network**
 - **Staff Network**
 - **Guest Network**
 
-•	_Network Topology_
+
+
+1.	_Network Topology_
 
 The network consists of multiple PCs connected through switches and a router that provides inter-network communication.
 
@@ -26,7 +32,7 @@ Figure 1: Virtual enterprise network topology showing Admin, Staff, and Guest ne
 
 
 
-•	_IP Address Configuration_
+2.	_IP Address Configuration_
 
 Each PC was assigned a static IP address to ensure proper communication across the network.
 
@@ -42,7 +48,8 @@ Figure 2: Static IP configuration for the Admin PC.
 
 
 
-•	_Connectivity Test (Before Applying ACL)_
+
+3.	_Connectivity Test (Before Applying ACL)_
 
 Before implementing any security controls, connectivity was tested to confirm that routing was functioning correctly.
 
@@ -51,14 +58,15 @@ Before implementing any security controls, connectivity was tested to confirm th
 
 ![Ping Test Before ACL](Pictures/Screenshots/Network/admin-staff-ping.png)
 
-*Figure 3: Successful connectivity test before applying ACLs.*
+ Figure 3: Successful connectivity test before applying ACLs.*
 
 This confirmed that all networks could communicate freely before restrictions were applied.
 
 
 
 
-•	_Access Control List (ACL) Configuration_
+
+4.	 _Access Control List (ACL) Configuration_
 
 To secure the Admin network, a standard ACL was created on the router. The ACL was designed to:
 - Deny traffic from the Staff network
@@ -68,10 +76,15 @@ To secure the Admin network, a standard ACL was created on the router. The ACL w
 The ACL was configured in global configuration mode and then applied **inbound** on the appropriate router interface.
 
 ![ACL Applied to Interface](Pictures/Screenshots/Network/acl-applied-Interface.png)
-Figure 4: ACL applied inbound on the router interface to enforce traffic restrictions.
+Figure 4: ACL applied inbound on the router interface to enforce traffic restrictions.  
+  
 
 
-![Router ACL Configuration](Pictures/Screenshots/Network/router-acl.png)
+
+
+
+5.       ![Router ACL Configuration](Pictures/Screenshots/Network/router-acl.png)
+
 Figure 5: Router CLI showing ACL rules configured with deny and permit statements.
 
 These two steps are both required, creating an ACL alone does not enforce security unless it is applied to an interface.
@@ -79,24 +92,32 @@ These two steps are both required, creating an ACL alone does not enforce securi
 
 
 
-•	_Connectivity Test (After Applying ACL)_
+
+6.	_Connectivity Test (After Applying ACL)_
+
 - Guest Network → Admin Network
 After the ACL was applied, connectivity tests were repeated. When the Guest PC attempted to ping the Admin PC, most packets were blocked. The picture also showed Admin could reach the Guest.
 
 ![Guest to Admin Ping Blocked](Pictures/Screenshots/Network/guest-admin-ping-blocked.png)
 
-Figure 5: Guest network traffic being restricted after ACL enforcement.
+Figure 6: Guest network traffic being restricted after ACL enforcement.
+
 
 
 _Note_: One packet was delivered while others failed. This behavior can occur due to address resolution or packets already in transit before the ACL fully takes effect. Subsequent tests confirmed that access was successfully blocked.
 
-• _Staff Network → Admin Network_
+
+
+
+
+7.        _Staff Network → Admin Network_
 
 The Staff PC was also unable to reach the Admin PC after the ACL was enforced.
 
 ![Staff to Admin Ping Blocked](Pictures/Screenshots/Network/staff-admin-ping-failed.png)
 
-Figure 6: Staff network unable to reach the Admin network after ACL application.
+Figure 7: Staff network unable to reach the Admin network after ACL application.
+
 
 
 This confirms that the security policy was successfully implemented.
@@ -104,7 +125,8 @@ This confirms that the security policy was successfully implemented.
 
 
 
-•	_Challenges Faced and Lessons Learned_
+
+	_Challenges Faced and Lessons Learned_
 
 During this project, several challenges were encountered:
 - Receiving `Invalid input detected` errors due to entering commands in the wrong configuration mode
@@ -115,8 +137,7 @@ These challenges helped reinforce the importance of understanding **where** and 
 
 
 
-
-•_	Key Takeaways_
+        _Key Takeaways_
 
 - ACLs do not work unless they are applied to an interface
 - The direction (inbound or outbound) of an ACL matters
@@ -125,7 +146,8 @@ These challenges helped reinforce the importance of understanding **where** and 
 
 
 
-•	_Possible Improvements_
+	
+         _Possible Improvements_
 Future enhancements to this project could include:
 - VLAN segmentation
 - Extended ACLs
