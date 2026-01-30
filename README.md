@@ -19,7 +19,7 @@ The network was divided into three logical groups:
 
 The network consists of multiple PCs connected through switches and a router that provides inter-network communication.
 
-![Network Topology Diagram](Pictures/Screenshots/Network/guest-admin-ping-blocked.png)
+![Network Topology Diagram](Pictures/Screenshots/Network/network-topology.png)
 
 Figure 1: Virtual enterprise network topology showing Admin, Staff, and Guest networks.
 
