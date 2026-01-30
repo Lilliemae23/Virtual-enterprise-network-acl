@@ -23,6 +23,7 @@ The network consists of multiple PCs connected through switches and a router tha
 
 Figure 1: Virtual enterprise network topology showing Admin, Staff, and Guest networks.
 
+
 •	IP Address Configuration
 
 Each PC was assigned a static IP address to ensure proper communication across the network.
@@ -35,6 +36,7 @@ Admin PC Configuration
 ![Admin PC IP Configuration](Pictures/Screenshots/Network/admin-ip-config.png)
 
 Figure 2: Static IP configuration for the Admin PC.
+
 
 •	Connectivity Test (Before Applying ACL)
 
@@ -49,6 +51,7 @@ Before implementing any security controls, connectivity was tested to confirm th
 
 This confirmed that all networks could communicate freely before restrictions were applied.
 
+
 •	Access Control List (ACL) Configuration
 
 To secure the Admin network, a standard ACL was created on the router. The ACL was designed to:
@@ -61,18 +64,21 @@ The ACL was configured in global configuration mode and then applied **inbound**
 ![ACL Applied to Interface](Pictures/Screenshots/Network/acl-applied-Interface.png)
 Figure 4: ACL applied inbound on the router interface to enforce traffic restrictions.
 
+
 ![Router ACL Configuration](Pictures/Screenshots/Network/router-acl.png)
 Figure 5: Router CLI showing ACL rules configured with deny and permit statements.
 
 These two steps are both required, creating an ACL alone does not enforce security unless it is applied to an interface.
 
+
 •	Connectivity Test (After Applying ACL)
 - Guest Network → Admin Network
-After the ACL was applied, connectivity tests were repeated. When the Guest PC attempted to ping the Admin PC, most packets were blocked.
+After the ACL was applied, connectivity tests were repeated. When the Guest PC attempted to ping the Admin PC, most packets were blocked. The picture also showed Admin could reach the Guest.
 
 ![Guest to Admin Ping Blocked](Pictures/Screenshots/Network/guest-admin-ping-blocked.png)
 
 Figure 5: Guest network traffic being restricted after ACL enforcement.
+
 
 Note: One packet was delivered while others failed. This behavior can occur due to address resolution or packets already in transit before the ACL fully takes effect. Subsequent tests confirmed that access was successfully blocked.
 
@@ -84,7 +90,9 @@ The Staff PC was also unable to reach the Admin PC after the ACL was enforced.
 
 Figure 6: Staff network unable to reach the Admin network after ACL application.
 
+
 This confirms that the security policy was successfully implemented.
+
 
 
 •	Challenges Faced and Lessons Learned
