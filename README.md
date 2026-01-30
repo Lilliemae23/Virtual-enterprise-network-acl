@@ -61,7 +61,7 @@ The ACL was configured in global configuration mode and then applied **inbound**
 ![ACL Applied to Interface](Pictures/Screenshots/Network/acl-applied-Interface.png)
 Figure 4: ACL applied inbound on the router interface to enforce traffic restrictions.
 
-![Router ACL Configuration](Virtual-enterprise-network-acl/router-acl.png)
+![Router ACL Configuration](Pictures/Screenshots/Network/router-acl.png)
 Figure 5: Router CLI showing ACL rules configured with deny and permit statements.
 
 These two steps are both required, creating an ACL alone does not enforce security unless it is applied to an interface.
