@@ -1,4 +1,4 @@
-Designing and Securing a Virtual Enterprise Network
+**Designing and Securing a Virtual Enterprise Network**
 
 This project demonstrates the design of a simple virtual enterprise network using Cisco Packet Tracer, with a focus on controlling inter-department traffic using Access Control Lists (ACLs). The goal of this lab was to understand how routing and basic network security work together in a practical, hands-on environment.
 
@@ -15,7 +15,7 @@ The network was divided into three logical groups:
 - **Staff Network**
 - **Guest Network**
 
-•	Network Topology
+•	_Network Topology_
 
 The network consists of multiple PCs connected through switches and a router that provides inter-network communication.
 
@@ -26,7 +26,7 @@ Figure 1: Virtual enterprise network topology showing Admin, Staff, and Guest ne
 
 
 
-•	IP Address Configuration
+•	_IP Address Configuration_
 
 Each PC was assigned a static IP address to ensure proper communication across the network.
 
@@ -42,7 +42,7 @@ Figure 2: Static IP configuration for the Admin PC.
 
 
 
-•	Connectivity Test (Before Applying ACL)
+•	_Connectivity Test _(Before Applying ACL)
 
 Before implementing any security controls, connectivity was tested to confirm that routing was functioning correctly.
 
@@ -58,7 +58,7 @@ This confirmed that all networks could communicate freely before restrictions we
 
 
 
-•	Access Control List (ACL) Configuration
+•	_Access Control List (ACL) Configuration_
 
 To secure the Admin network, a standard ACL was created on the router. The ACL was designed to:
 - Deny traffic from the Staff network
@@ -79,7 +79,7 @@ These two steps are both required, creating an ACL alone does not enforce securi
 
 
 
-•	Connectivity Test (After Applying ACL)
+•	_Connectivity Test (After Applying ACL)_
 - Guest Network → Admin Network
 After the ACL was applied, connectivity tests were repeated. When the Guest PC attempted to ping the Admin PC, most packets were blocked. The picture also showed Admin could reach the Guest.
 
@@ -88,9 +88,9 @@ After the ACL was applied, connectivity tests were repeated. When the Guest PC a
 Figure 5: Guest network traffic being restricted after ACL enforcement.
 
 
-Note: One packet was delivered while others failed. This behavior can occur due to address resolution or packets already in transit before the ACL fully takes effect. Subsequent tests confirmed that access was successfully blocked.
+_Note_: One packet was delivered while others failed. This behavior can occur due to address resolution or packets already in transit before the ACL fully takes effect. Subsequent tests confirmed that access was successfully blocked.
 
-- Staff Network → Admin Network
+• _Staff Network → Admin Network_
 
 The Staff PC was also unable to reach the Admin PC after the ACL was enforced.
 
@@ -104,7 +104,7 @@ This confirms that the security policy was successfully implemented.
 
 
 
-•	Challenges Faced and Lessons Learned
+•	_Challenges Faced and Lessons Learned_
 
 During this project, several challenges were encountered:
 - Receiving `Invalid input detected` errors due to entering commands in the wrong configuration mode
@@ -116,7 +116,7 @@ These challenges helped reinforce the importance of understanding **where** and 
 
 
 
-•	Key Takeaways
+•_	Key Takeaways_
 
 - ACLs do not work unless they are applied to an interface
 - The direction (inbound or outbound) of an ACL matters
@@ -125,7 +125,7 @@ These challenges helped reinforce the importance of understanding **where** and 
 
 
 
-•	Possible Improvements
+•	_Possible Improvements_
 Future enhancements to this project could include:
 - VLAN segmentation
 - Extended ACLs
