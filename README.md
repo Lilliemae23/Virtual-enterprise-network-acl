@@ -43,7 +43,7 @@ Before implementing any security controls, connectivity was tested to confirm th
 - Admin PC successfully pinged Staff PC
 - Guest PC was able to reach the Admin PC
 
-![Ping Test Before ACL](Virtual-enterprise-network-acl/admin-staff-ping.png)
+![Ping Test Before ACL](Pictures/Screenshots/Network/admin-staff-ping.png)
 
 *Figure 3: Successful connectivity test before applying ACLs.*
 
