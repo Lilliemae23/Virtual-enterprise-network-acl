@@ -80,7 +80,7 @@ Note: One packet was delivered while others failed. This behavior can occur due 
 
 The Staff PC was also unable to reach the Admin PC after the ACL was enforced.
 
-![Staff to Admin Ping Blocked](Virtual-enterprise-network-acl/staff-admin-ping-fail.png)
+![Staff to Admin Ping Blocked](Pictures/Screenshots/Network/staff-admin-ping-failed.png)
 
 Figure 6: Staff network unable to reach the Admin network after ACL application.
 
