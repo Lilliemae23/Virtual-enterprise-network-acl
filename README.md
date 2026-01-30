@@ -24,6 +24,8 @@ The network consists of multiple PCs connected through switches and a router tha
 Figure 1: Virtual enterprise network topology showing Admin, Staff, and Guest networks.
 
 
+
+
 •	IP Address Configuration
 
 Each PC was assigned a static IP address to ensure proper communication across the network.
@@ -38,6 +40,8 @@ Admin PC Configuration
 Figure 2: Static IP configuration for the Admin PC.
 
 
+
+
 •	Connectivity Test (Before Applying ACL)
 
 Before implementing any security controls, connectivity was tested to confirm that routing was functioning correctly.
@@ -50,6 +54,8 @@ Before implementing any security controls, connectivity was tested to confirm th
 *Figure 3: Successful connectivity test before applying ACLs.*
 
 This confirmed that all networks could communicate freely before restrictions were applied.
+
+
 
 
 •	Access Control List (ACL) Configuration
@@ -69,6 +75,8 @@ Figure 4: ACL applied inbound on the router interface to enforce traffic restric
 Figure 5: Router CLI showing ACL rules configured with deny and permit statements.
 
 These two steps are both required, creating an ACL alone does not enforce security unless it is applied to an interface.
+
+
 
 
 •	Connectivity Test (After Applying ACL)
@@ -95,6 +103,7 @@ This confirms that the security policy was successfully implemented.
 
 
 
+
 •	Challenges Faced and Lessons Learned
 
 During this project, several challenges were encountered:
@@ -105,12 +114,16 @@ During this project, several challenges were encountered:
 These challenges helped reinforce the importance of understanding **where** and **how** security rules are applied.
 
 
+
+
 •	Key Takeaways
 
 - ACLs do not work unless they are applied to an interface
 - The direction (inbound or outbound) of an ACL matters
 - Connectivity should always be tested before and after applying security controls
 - Troubleshooting is a critical part of network engineering
+
+
 
 •	Possible Improvements
 Future enhancements to this project could include:
