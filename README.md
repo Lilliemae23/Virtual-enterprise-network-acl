@@ -32,7 +32,7 @@ Admin PC Configuration
 - Subnet Mask: `255.255.255.0`
 - Default Gateway: `192.168.10.1`
 
-![Admin PC IP Configuration](Virtual-enterprise-network-acl/admin-ip-config.png)
+![Admin PC IP Configuration](Pictures/Screenshots/Network/admin-ip-config.png)
 
 Figure 2: Static IP configuration for the Admin PC.
 
