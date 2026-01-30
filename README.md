@@ -42,7 +42,7 @@ Figure 2: Static IP configuration for the Admin PC.
 
 
 
-•	__Connectivity Test _(Before _Applying ACL)_
+•_	__Connectivity Test _(Before _Applying ACL)__
 
 Before implementing any security controls, connectivity was tested to confirm that routing was functioning correctly.
 
