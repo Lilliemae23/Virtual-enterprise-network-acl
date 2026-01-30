@@ -81,9 +81,8 @@ Figure 4: ACL applied inbound on the router interface to enforce traffic restric
 
 
 
-
-
-5.       ![Router ACL Configuration](Pictures/Screenshots/Network/router-acl.png)
+5. _Router Permit_
+  ![Router ACL Configuration](Pictures/Screenshots/Network/router-acl.png)
 
 Figure 5: Router CLI showing ACL rules configured with deny and permit statements.
 
@@ -110,7 +109,7 @@ _Note_: One packet was delivered while others failed. This behavior can occur du
 
 
 
-7.        _Staff Network → Admin Network_
+7.   Staff Network → Admin Network
 
 The Staff PC was also unable to reach the Admin PC after the ACL was enforced.
 
@@ -126,7 +125,7 @@ This confirms that the security policy was successfully implemented.
 
 
 
-	_Challenges Faced and Lessons Learned_
+**Challenges Faced and Lessons Learned**
 
 During this project, several challenges were encountered:
 - Receiving `Invalid input detected` errors due to entering commands in the wrong configuration mode
@@ -137,7 +136,7 @@ These challenges helped reinforce the importance of understanding **where** and 
 
 
 
-        _Key Takeaways_
+**Key Takeaways**
 
 - ACLs do not work unless they are applied to an interface
 - The direction (inbound or outbound) of an ACL matters
@@ -147,7 +146,7 @@ These challenges helped reinforce the importance of understanding **where** and 
 
 
 	
-         _Possible Improvements_
+   **Possible Improvements**
 Future enhancements to this project could include:
 - VLAN segmentation
 - Extended ACLs
