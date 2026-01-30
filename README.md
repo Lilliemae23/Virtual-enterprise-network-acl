@@ -70,7 +70,7 @@ These two steps are both required, creating an ACL alone does not enforce securi
 - Guest Network → Admin Network
 After the ACL was applied, connectivity tests were repeated. When the Guest PC attempted to ping the Admin PC, most packets were blocked.
 
-![Guest to Admin Ping Blocked](Virtual-enterprise-network-acl/guest-admin-ping-blocked.png)
+![Guest to Admin Ping Blocked](Pictures/Screenshots/Network/guest-admin-ping-blocked.png)
 
 Figure 5: Guest network traffic being restricted after ACL enforcement.
 
